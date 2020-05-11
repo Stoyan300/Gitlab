@@ -1,0 +1,9 @@
+2020-05-07_16:37:50.95801 starting new unicorn master
+2020-05-07_16:38:38.54387 adopted new unicorn master 494
+2020-05-07_16:41:41.24953 Received TERM from runit, sending to process group (-PID)
+2020-05-07_16:41:41.25990 Terminated
+2020-05-07_16:41:41.26100 forwarding TERM to unicorn master 494
+2020-05-07_16:41:41.28508 Waiting for unicorn to die...
+2020-05-07_16:41:42.30278 forwarding CONT to unicorn master 494
+2020-05-07_16:41:42.30279 /opt/gitlab/embedded/bin/gitlab-unicorn-wrapper: line 132: kill: (494) - No such process
+2020-05-07_16:41:42.30309 wrapper for unicorn master 494 exiting

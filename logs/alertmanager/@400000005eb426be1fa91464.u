@@ -1,0 +1,9 @@
+2020-05-07_15:15:54.01440 level=info ts=2020-05-07T15:15:53.022Z caller=main.go:231 msg="Starting Alertmanager" version="(version=0.20.0, branch=master, revision=)"
+2020-05-07_15:15:54.01444 level=info ts=2020-05-07T15:15:53.022Z caller=main.go:232 build_context="(go=go1.13.9, user=GitLab-Omnibus, date=)"
+2020-05-07_15:15:54.01445 level=info ts=2020-05-07T15:15:53.023Z caller=cluster.go:161 component=cluster msg="setting advertise address explicitly" addr=172.26.0.2 port=9094
+2020-05-07_15:15:54.01445 level=info ts=2020-05-07T15:15:53.070Z caller=cluster.go:623 component=cluster msg="Waiting for gossip to settle..." interval=2s
+2020-05-07_15:15:54.01445 level=info ts=2020-05-07T15:15:53.140Z caller=coordinator.go:119 component=configuration msg="Loading configuration file" file=/var/opt/gitlab/alertmanager/alertmanager.yml
+2020-05-07_15:15:54.01445 level=info ts=2020-05-07T15:15:53.140Z caller=coordinator.go:131 component=configuration msg="Completed loading of configuration file" file=/var/opt/gitlab/alertmanager/alertmanager.yml
+2020-05-07_15:15:54.01446 level=info ts=2020-05-07T15:15:53.142Z caller=main.go:497 msg=Listening address=localhost:9093
+2020-05-07_15:15:55.07081 level=info ts=2020-05-07T15:15:55.070Z caller=cluster.go:648 component=cluster msg="gossip not settled" polls=0 before=0 now=1 elapsed=2.00031873s
+2020-05-07_15:16:03.09452 level=info ts=2020-05-07T15:16:03.073Z caller=cluster.go:640 component=cluster msg="gossip settled; proceeding" elapsed=10.002835406s

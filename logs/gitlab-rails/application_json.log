@@ -1,0 +1,2 @@
+{"severity":"DEBUG","time":"2020-05-07T16:38:12.574Z","correlation_id":null,"message":"DB connection pool size: 27 (increased from 1 to match thread count)"}
+{"severity":"DEBUG","time":"2020-05-07T16:43:19.234Z","correlation_id":null,"message":"DB connection pool size: 27 (increased from 1 to match thread count)"}

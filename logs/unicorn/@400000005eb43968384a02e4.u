@@ -1,0 +1,7 @@
+2020-05-07_15:17:37.23200 starting new unicorn master
+2020-05-07_15:18:29.99702 adopted new unicorn master 493
+2020-05-07_16:29:43.37482 Received TERM from runit, sending to process group (-PID)
+2020-05-07_16:29:43.38409 Terminated
+2020-05-07_16:29:43.38539 forwarding TERM to unicorn master 493
+2020-05-07_16:29:43.41401 Waiting for unicorn to die...
+2020-05-07_16:29:44.41603 Waiting for unicorn to die...

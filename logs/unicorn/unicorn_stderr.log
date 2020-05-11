@@ -1,0 +1,23 @@
+I, [2020-05-07T16:29:43.500Z #493]  INFO -- : reaped #<Process::Status: pid 672 exit 0> worker=0
+I, [2020-05-07T16:29:43.503Z #493]  INFO -- : reaped #<Process::Status: pid 673 exit 0> worker=1
+I, [2020-05-07T16:29:43.503Z #493]  INFO -- : master complete
+I, [2020-05-07T16:37:51.606Z #494]  INFO -- : Refreshing Gem list
+I, [2020-05-07T16:38:37.311Z #494]  INFO -- : listening on addr=127.0.0.1:8080 fd=20
+I, [2020-05-07T16:38:37.312Z #494]  INFO -- : unlinking existing socket=/var/opt/gitlab/gitlab-rails/sockets/gitlab.socket
+I, [2020-05-07T16:38:37.312Z #494]  INFO -- : listening on addr=/var/opt/gitlab/gitlab-rails/sockets/gitlab.socket fd=21
+I, [2020-05-07T16:38:37.505Z #494]  INFO -- : master process ready
+I, [2020-05-07T16:38:37.783Z #616]  INFO -- : worker=0 ready
+I, [2020-05-07T16:38:37.802Z #617]  INFO -- : worker=1 ready
+I, [2020-05-07T16:41:41.373Z #494]  INFO -- : reaped #<Process::Status: pid 616 exit 0> worker=0
+I, [2020-05-07T16:41:41.375Z #494]  INFO -- : reaped #<Process::Status: pid 617 exit 0> worker=1
+I, [2020-05-07T16:41:41.377Z #494]  INFO -- : master complete
+I, [2020-05-07T16:42:58.573Z #495]  INFO -- : Refreshing Gem list
+I, [2020-05-07T16:43:44.478Z #495]  INFO -- : listening on addr=127.0.0.1:8080 fd=20
+I, [2020-05-07T16:43:44.479Z #495]  INFO -- : unlinking existing socket=/var/opt/gitlab/gitlab-rails/sockets/gitlab.socket
+I, [2020-05-07T16:43:44.479Z #495]  INFO -- : listening on addr=/var/opt/gitlab/gitlab-rails/sockets/gitlab.socket fd=21
+I, [2020-05-07T16:43:44.665Z #495]  INFO -- : master process ready
+I, [2020-05-07T16:43:44.949Z #618]  INFO -- : worker=0 ready
+I, [2020-05-07T16:43:44.952Z #619]  INFO -- : worker=1 ready
+I, [2020-05-07T16:45:20.266Z #495]  INFO -- : reaped #<Process::Status: pid 618 exit 0> worker=0
+I, [2020-05-07T16:45:20.267Z #495]  INFO -- : reaped #<Process::Status: pid 619 exit 0> worker=1
+I, [2020-05-07T16:45:20.268Z #495]  INFO -- : master complete

@@ -1,0 +1,49 @@
+version: '3.5'
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    restart: unless-stopped
+    environment:
+      - GITLAB_PASSWORD=stoyanspasov89
+      - GITLAB_EMAIL_FROM=s.spasov89@gmail.com
+      - GITLAB_HOST=192.168.1.8
+    ports:
+      - "8000:80"
+      - "50443:433"
+      - "8822:8822"
+    volumes:
+      - ./config/gitlab:/etc/gitlab
+      - ./data/gitlab:/var/opt/gitlab
+      - ./logs:/var/log/gitlab
+    networks:
+      - default
+
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    restart: unless-stopped
+    depends_on:
+      - gitlab
+    volumes:
+      - ./config/gitlab-runner:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - default
+
+  gitlab-nginx:
+    build:
+        context: .
+        dockerfile: nginx.dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+    - HOST=www.stoyanspasov.com
+    - EMAIL=s.spasov89@gmail.com
+    - PASSWORD=stoyanspasov89
+    volumes:
+      - "./nginx/certs:/etc/nginx/certs"
+    restart: always
+
+networks:
+ default:
+

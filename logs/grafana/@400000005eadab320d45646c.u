@@ -1,0 +1,319 @@
+2020-05-02_16:04:26.10995 t=2020-05-02T16:04:26+0000 lvl=info msg="Starting Grafana" logger=server version=6.3.5 commit=67bad72 branch=HEAD compiled=2019-09-02T09:34:49+0000
+2020-05-02_16:04:26.11032 t=2020-05-02T16:04:26+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/conf/defaults.ini
+2020-05-02_16:04:26.11032 t=2020-05-02T16:04:26+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/grafana.ini
+2020-05-02_16:04:26.11033 t=2020-05-02T16:04:26+0000 lvl=info msg="Path Home" logger=settings path=/var/opt/gitlab/grafana
+2020-05-02_16:04:26.11033 t=2020-05-02T16:04:26+0000 lvl=info msg="Path Data" logger=settings path=/var/opt/gitlab/grafana/data
+2020-05-02_16:04:26.11033 t=2020-05-02T16:04:26+0000 lvl=info msg="Path Logs" logger=settings path=/var/log/gitlab/grafana
+2020-05-02_16:04:26.11034 t=2020-05-02T16:04:26+0000 lvl=info msg="Path Plugins" logger=settings path=/var/opt/gitlab/grafana/data/plugins
+2020-05-02_16:04:26.11034 t=2020-05-02T16:04:26+0000 lvl=info msg="Path Provisioning" logger=settings path=/var/opt/gitlab/grafana/provisioning
+2020-05-02_16:04:26.11035 t=2020-05-02T16:04:26+0000 lvl=info msg="App mode production" logger=settings
+2020-05-02_16:04:26.11132 t=2020-05-02T16:04:26+0000 lvl=info msg="Initializing SqlStore" logger=server
+2020-05-02_16:04:26.11191 t=2020-05-02T16:04:26+0000 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+2020-05-02_16:04:26.11297 t=2020-05-02T16:04:26+0000 lvl=info msg="Starting DB migration" logger=migrator
+2020-05-02_16:04:26.11551 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create migration_log table"
+2020-05-02_16:04:26.12126 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create user table"
+2020-05-02_16:04:26.12381 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user.login"
+2020-05-02_16:04:26.14242 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user.email"
+2020-05-02_16:04:27.17394 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_login - v1"
+2020-05-02_16:04:27.17399 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_email - v1"
+2020-05-02_16:04:27.17400 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table user to user_v1 - v1"
+2020-05-02_16:04:27.17400 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create user table v2"
+2020-05-02_16:04:27.17401 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_login - v2"
+2020-05-02_16:04:27.17401 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_email - v2"
+2020-05-02_16:04:27.17401 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+2020-05-02_16:04:27.17402 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table user_v1"
+2020-05-02_16:04:27.17402 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add column help_flags1 to user table"
+2020-05-02_16:04:27.17403 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Update user table charset"
+2020-05-02_16:04:27.17404 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add last_seen_at column to user"
+2020-05-02_16:04:27.17404 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add missing user data"
+2020-05-02_16:04:27.17404 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add is_disabled column to user"
+2020-05-02_16:04:27.17405 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create temp user table v1-7"
+2020-05-02_16:04:27.17405 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_email - v1-7"
+2020-05-02_16:04:27.17406 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_org_id - v1-7"
+2020-05-02_16:04:27.17407 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_code - v1-7"
+2020-05-02_16:04:27.17407 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_status - v1-7"
+2020-05-02_16:04:27.17408 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Update temp_user table charset"
+2020-05-02_16:04:27.17409 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create star table"
+2020-05-02_16:04:27.17409 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index star.user_id_dashboard_id"
+2020-05-02_16:04:27.17409 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create org table v1"
+2020-05-02_16:04:27.17409 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_name - v1"
+2020-05-02_16:04:27.17410 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create org_user table v1"
+2020-05-02_16:04:27.17410 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_org_user_org_id - v1"
+2020-05-02_16:04:27.17410 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_user_org_id_user_id - v1"
+2020-05-02_16:04:27.17411 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Update org table charset"
+2020-05-02_16:04:27.17412 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Update org_user table charset"
+2020-05-02_16:04:27.17412 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Migrate all Read Only Viewers to Viewers"
+2020-05-02_16:04:27.17412 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard table"
+2020-05-02_16:04:27.17413 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="add index dashboard.account_id"
+2020-05-02_16:04:27.17413 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_account_id_slug"
+2020-05-02_16:04:27.17413 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_tag table"
+2020-05-02_16:04:27.17414 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_tag.dasboard_id_term"
+2020-05-02_16:04:27.17414 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+2020-05-02_16:04:27.17415 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard to dashboard_v1 - v1"
+2020-05-02_16:04:27.17417 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard v2"
+2020-05-02_16:04:27.17418 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_org_id - v2"
+2020-05-02_16:04:27.17418 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_org_id_slug - v2"
+2020-05-02_16:04:27.17418 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="copy dashboard v1 to v2"
+2020-05-02_16:04:27.17419 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_v1"
+2020-05-02_16:04:27.17419 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="alter dashboard.data to mediumtext v1"
+2020-05-02_16:04:27.17419 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add column updated_by in dashboard - v2"
+2020-05-02_16:04:27.17420 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add column created_by in dashboard - v2"
+2020-05-02_16:04:27.17423 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add column gnetId in dashboard"
+2020-05-02_16:04:27.17424 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for gnetId in dashboard"
+2020-05-02_16:04:27.17425 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_id in dashboard"
+2020-05-02_16:04:27.17425 t=2020-05-02T16:04:26+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for plugin_id in dashboard"
+2020-05-02_16:04:27.17425 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_id in dashboard_tag"
+2020-05-02_16:04:27.17426 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard table charset"
+2020-05-02_16:04:27.17426 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_tag table charset"
+2020-05-02_16:04:27.17426 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add column folder_id in dashboard"
+2020-05-02_16:04:27.17427 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add column isFolder in dashboard"
+2020-05-02_16:04:27.17428 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add column has_acl in dashboard"
+2020-05-02_16:04:27.17428 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add column uid in dashboard"
+2020-05-02_16:04:27.17428 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in dashboard"
+2020-05-02_16:04:27.17429 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index dashboard_org_id_uid"
+2020-05-02_16:04:27.17429 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_slug"
+2020-05-02_16:04:27.18567 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard title length"
+2020-05-02_16:04:27.20488 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index for dashboard_org_id_title_folder_id"
+2020-05-02_16:04:27.21664 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning"
+2020-05-02_16:04:27.23613 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+2020-05-02_16:04:27.26809 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning v2"
+2020-05-02_16:04:27.27973 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+2020-05-02_16:04:27.30742 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+2020-05-02_16:04:27.31078 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="copy dashboard_provisioning v1 to v2"
+2020-05-02_16:04:27.32937 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="drop dashboard_provisioning_tmp_qwerty"
+2020-05-02_16:04:27.34032 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add check_sum column"
+2020-05-02_16:04:27.35614 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create data_source table"
+2020-05-02_16:04:27.37680 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="add index data_source.account_id"
+2020-05-02_16:04:27.39762 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index data_source.account_id_name"
+2020-05-02_16:04:27.41093 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_data_source_account_id - v1"
+2020-05-02_16:04:27.42369 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_data_source_account_id_name - v1"
+2020-05-02_16:04:27.44299 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table data_source to data_source_v1 - v1"
+2020-05-02_16:04:27.45385 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create data_source table v2"
+2020-05-02_16:04:27.47259 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_data_source_org_id - v2"
+2020-05-02_16:04:27.49247 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_data_source_org_id_name - v2"
+2020-05-02_16:04:27.50399 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+2020-05-02_16:04:27.52218 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table data_source_v1 #2"
+2020-05-02_16:04:27.53328 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add column with_credentials"
+2020-05-02_16:04:27.55195 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add secure json data column"
+2020-05-02_16:04:27.56311 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update data_source table charset"
+2020-05-02_16:04:27.58315 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update initial version to 1"
+2020-05-02_16:04:27.59454 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add read_only data column"
+2020-05-02_16:04:27.61554 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Migrate logging ds to loki ds"
+2020-05-02_16:04:27.62725 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update json_data with nulls"
+2020-05-02_16:04:27.64771 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create api_key table"
+2020-05-02_16:04:27.65954 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id"
+2020-05-02_16:04:27.67148 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="add index api_key.key"
+2020-05-02_16:04:27.69191 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id_name"
+2020-05-02_16:04:27.70335 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_api_key_account_id - v1"
+2020-05-02_16:04:27.72308 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_key - v1"
+2020-05-02_16:04:27.73654 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_account_id_name - v1"
+2020-05-02_16:04:27.74962 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table api_key to api_key_v1 - v1"
+2020-05-02_16:04:27.76890 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create api_key table v2"
+2020-05-02_16:04:27.78178 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_api_key_org_id - v2"
+2020-05-02_16:04:27.80079 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_key - v2"
+2020-05-02_16:04:27.81250 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_org_id_name - v2"
+2020-05-02_16:04:27.82771 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="copy api_key v1 to v2"
+2020-05-02_16:04:27.84809 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table api_key_v1"
+2020-05-02_16:04:27.85975 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Update api_key table charset"
+2020-05-02_16:04:27.87285 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="Add expires to api_key table"
+2020-05-02_16:04:27.89307 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v4"
+2020-05-02_16:04:27.90701 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_snapshot_v4 #1"
+2020-05-02_16:04:27.92584 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v5 #2"
+2020-05-02_16:04:27.93878 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_key - v5"
+2020-05-02_16:04:27.95766 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_delete_key - v5"
+2020-05-02_16:04:27.96913 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_snapshot_user_id - v5"
+2020-05-02_16:04:27.99318 t=2020-05-02T16:04:27+0000 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_snapshot to mediumtext v2"
+2020-05-02_16:04:28.00416 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_snapshot table charset"
+2020-05-02_16:04:28.01655 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column external_delete_url to dashboard_snapshots table"
+2020-05-02_16:04:28.03573 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create quota table v1"
+2020-05-02_16:04:28.04714 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_quota_org_id_user_id_target - v1"
+2020-05-02_16:04:28.06672 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update quota table charset"
+2020-05-02_16:04:28.11180 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create plugin_setting table"
+2020-05-02_16:04:28.11556 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+2020-05-02_16:04:28.13471 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_version to plugin_settings"
+2020-05-02_16:04:28.14613 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update plugin_setting table charset"
+2020-05-02_16:04:28.16606 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create session table"
+2020-05-02_16:04:28.17799 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist table"
+2020-05-02_16:04:28.19664 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist_item table"
+2020-05-02_16:04:28.21049 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create playlist table v2"
+2020-05-02_16:04:28.23532 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create playlist item table v2"
+2020-05-02_16:04:28.24805 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update playlist table charset"
+2020-05-02_16:04:28.26001 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update playlist_item table charset"
+2020-05-02_16:04:28.27230 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v2"
+2020-05-02_16:04:28.29152 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v3"
+2020-05-02_16:04:28.31298 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create preferences table v3"
+2020-05-02_16:04:28.33214 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update preferences table charset"
+2020-05-02_16:04:28.34325 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column team_id in preferences"
+2020-05-02_16:04:28.36244 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update team_id column values in preferences"
+2020-05-02_16:04:28.37409 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create alert table v1"
+2020-05-02_16:04:28.39275 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert org_id & id "
+2020-05-02_16:04:28.41482 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert state"
+2020-05-02_16:04:28.42723 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert dashboard_id"
+2020-05-02_16:04:28.44010 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Create alert_rule_tag table v1"
+2020-05-02_16:04:28.45162 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_rule_tag.alert_id_tag_id"
+2020-05-02_16:04:28.47198 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create alert_notification table v1"
+2020-05-02_16:04:28.48469 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column is_default"
+2020-05-02_16:04:28.50929 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column frequency"
+2020-05-02_16:04:28.52335 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column send_reminder"
+2020-05-02_16:04:28.53518 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column disable_resolve_message"
+2020-05-02_16:04:28.54886 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification org_id & name"
+2020-05-02_16:04:28.56800 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update alert table charset"
+2020-05-02_16:04:28.57969 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update alert_notification table charset"
+2020-05-02_16:04:28.59835 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create notification_journal table v1"
+2020-05-02_16:04:28.61018 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index notification_journal org_id & alert_id & notifier_id"
+2020-05-02_16:04:28.64063 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="drop alert_notification_journal"
+2020-05-02_16:04:28.65242 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create alert_notification_state table v1"
+2020-05-02_16:04:28.67239 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification_state org_id & alert_id & notifier_id"
+2020-05-02_16:04:28.68483 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add for to alert table"
+2020-05-02_16:04:28.69719 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column uid in alert_notification"
+2020-05-02_16:04:28.71883 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in alert_notification"
+2020-05-02_16:04:28.73048 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_notification_org_id_uid"
+2020-05-02_16:04:28.75043 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_name"
+2020-05-02_16:04:28.76306 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Drop old annotation table v4"
+2020-05-02_16:04:28.77471 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="create annotation table v5"
+2020-05-02_16:04:28.79370 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 0 v3"
+2020-05-02_16:04:28.80643 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 1 v3"
+2020-05-02_16:04:28.82610 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 2 v3"
+2020-05-02_16:04:28.84804 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 3 v3"
+2020-05-02_16:04:28.86933 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="add index annotation 4 v3"
+2020-05-02_16:04:28.88146 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update annotation table charset"
+2020-05-02_16:04:28.90032 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column region_id to annotation table"
+2020-05-02_16:04:28.91229 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Drop category_id index"
+2020-05-02_16:04:28.93302 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add column tags to annotation table"
+2020-05-02_16:04:28.94518 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Create annotation_tag table v2"
+2020-05-02_16:04:28.95643 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add unique index annotation_tag.annotation_id_tag_id"
+2020-05-02_16:04:28.97516 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Update alert annotations and set TEXT to empty"
+2020-05-02_16:04:28.99387 t=2020-05-02T16:04:28+0000 lvl=info msg="Executing migration" logger=migrator id="Add created time to annotation table"
+2020-05-02_16:04:29.00561 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add updated time to annotation table"
+2020-05-02_16:04:29.02423 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for created in annotation table"
+2020-05-02_16:04:29.03587 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add index for updated in annotation table"
+2020-05-02_16:04:29.05645 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Convert existing annotations from seconds to milliseconds"
+2020-05-02_16:04:29.06944 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create test_data table"
+2020-05-02_16:04:29.08257 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard_version table v1"
+2020-05-02_16:04:29.10427 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_version.dashboard_id"
+2020-05-02_16:04:29.11762 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+2020-05-02_16:04:29.13181 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Set dashboard version to 1 where 0"
+2020-05-02_16:04:29.15281 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="save existing dashboard data in dashboard_version table v1"
+2020-05-02_16:04:29.16348 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_version.data to mediumtext v1"
+2020-05-02_16:04:29.18329 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create team table"
+2020-05-02_16:04:29.19535 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add index team.org_id"
+2020-05-02_16:04:29.21605 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index team_org_id_name"
+2020-05-02_16:04:29.22921 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create team member table"
+2020-05-02_16:04:29.24003 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add index team_member.org_id"
+2020-05-02_16:04:29.25959 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index team_member_org_id_team_id_user_id"
+2020-05-02_16:04:29.27745 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add column email to team table"
+2020-05-02_16:04:29.28981 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add column external to team_member table"
+2020-05-02_16:04:29.30877 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add column permission to team_member table"
+2020-05-02_16:04:29.32050 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create dashboard acl table"
+2020-05-02_16:04:29.34035 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_acl_dashboard_id"
+2020-05-02_16:04:29.35210 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_user_id"
+2020-05-02_16:04:29.36467 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_team_id"
+2020-05-02_16:04:29.38488 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="save default acl rules in dashboard_acl table"
+2020-05-02_16:04:29.39597 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create tag table"
+2020-05-02_16:04:29.41556 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add index tag.key_value"
+2020-05-02_16:04:29.42882 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create login attempt table"
+2020-05-02_16:04:29.44749 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add index login_attempt.username"
+2020-05-02_16:04:29.45935 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_login_attempt_username - v1"
+2020-05-02_16:04:29.47824 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+2020-05-02_16:04:29.48971 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create login_attempt v2"
+2020-05-02_16:04:29.50913 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_login_attempt_username - v2"
+2020-05-02_16:04:29.52144 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="copy login_attempt v1 to v2"
+2020-05-02_16:04:29.53937 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="drop login_attempt_tmp_qwerty"
+2020-05-02_16:04:29.55168 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create user auth table"
+2020-05-02_16:04:29.57185 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create index IDX_user_auth_auth_module_auth_id - v1"
+2020-05-02_16:04:29.58481 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="alter user_auth.auth_id to length 190"
+2020-05-02_16:04:29.60472 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth access token to user_auth"
+2020-05-02_16:04:29.69799 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth refresh token to user_auth"
+2020-05-02_16:04:29.71605 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth token type to user_auth"
+2020-05-02_16:04:29.82857 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add OAuth expiry to user_auth"
+2020-05-02_16:04:29.85073 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="Add index to user_id column in user_auth"
+2020-05-02_16:04:29.86264 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create server_lock table"
+2020-05-02_16:04:29.88161 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add index server_lock.operation_uid"
+2020-05-02_16:04:29.89347 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create user auth token table"
+2020-05-02_16:04:29.91324 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.auth_token"
+2020-05-02_16:04:29.92516 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.prev_auth_token"
+2020-05-02_16:04:29.93626 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="create cache_data table"
+2020-05-02_16:04:29.95718 t=2020-05-02T16:04:29+0000 lvl=info msg="Executing migration" logger=migrator id="add unique index cache_data.cache_key"
+2020-05-02_16:04:30.01127 t=2020-05-02T16:04:30+0000 lvl=info msg="Created default admin" logger=sqlstore user=admin
+2020-05-02_16:04:30.01128 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing HTTPServer" logger=server
+2020-05-02_16:04:30.01284 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing InternalMetricsService" logger=server
+2020-05-02_16:04:30.01285 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing RemoteCache" logger=server
+2020-05-02_16:04:30.01285 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing QuotaService" logger=server
+2020-05-02_16:04:30.01286 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing PluginManager" logger=server
+2020-05-02_16:04:30.01323 t=2020-05-02T16:04:30+0000 lvl=info msg="Starting plugin search" logger=plugins
+2020-05-02_16:04:30.07620 t=2020-05-02T16:04:30+0000 lvl=info msg="Plugin dir created" logger=plugins dir=/var/opt/gitlab/grafana/data/plugins
+2020-05-02_16:04:30.09104 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing RenderingService" logger=server
+2020-05-02_16:04:30.09113 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing DatasourceCacheService" logger=server
+2020-05-02_16:04:30.09113 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing HooksService" logger=server
+2020-05-02_16:04:30.09114 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing LoginService" logger=server
+2020-05-02_16:04:30.09114 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing SearchService" logger=server
+2020-05-02_16:04:30.09115 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing ServerLockService" logger=server
+2020-05-02_16:04:30.09118 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing TracingService" logger=server
+2020-05-02_16:04:30.09118 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing UsageStatsService" logger=server
+2020-05-02_16:04:30.09122 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing UserAuthTokenService" logger=server
+2020-05-02_16:04:30.09122 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing CleanUpService" logger=server
+2020-05-02_16:04:30.09123 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing NotificationService" logger=server
+2020-05-02_16:04:30.09358 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing provisioningServiceImpl" logger=server
+2020-05-02_16:04:30.09409 t=2020-05-02T16:04:30+0000 lvl=info msg="inserting datasource from configuration " logger=provisioning.datasources name="GitLab Omnibus"
+2020-05-02_16:04:30.38832 t=2020-05-02T16:04:30+0000 lvl=info msg="Initializing Stream Manager"
+2020-05-02_16:04:30.38834 t=2020-05-02T16:04:30+0000 lvl=info msg="HTTP Server Listen" logger=http.server address=localhost:3000 protocol=http subUrl=/-/grafana socket=
+2020-05-02_16:04:57.64698 t=2020-05-02T16:04:57+0000 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+2020-05-02_16:04:57.64699 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped provisioningServiceImpl" logger=server reason="context canceled"
+2020-05-02_16:04:57.64701 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped PluginManager" logger=server reason="context canceled"
+2020-05-02_16:04:57.64705 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped UserAuthTokenService" logger=server reason="context canceled"
+2020-05-02_16:04:57.64740 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped Stream Manager"
+2020-05-02_16:04:57.64740 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped NotificationService" logger=server reason="context canceled"
+2020-05-02_16:04:57.64740 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped CleanUpService" logger=server reason="context canceled"
+2020-05-02_16:04:57.64741 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped RemoteCache" logger=server reason="context canceled"
+2020-05-02_16:04:57.64741 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped RenderingService" logger=server reason=nil
+2020-05-02_16:04:57.64741 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped UsageStatsService" logger=server reason="context canceled"
+2020-05-02_16:04:57.64741 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped InternalMetricsService" logger=server reason="context canceled"
+2020-05-02_16:04:57.64741 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped TracingService" logger=server reason=nil
+2020-05-02_16:04:57.75072 t=2020-05-02T16:04:57+0000 lvl=info msg="Stopped HTTPServer" logger=server reason=nil
+2020-05-02_16:04:57.75098 t=2020-05-02T16:04:57+0000 lvl=eror msg="Server shutdown" logger=server reason="System signal: terminated"
+2020-05-02_16:04:57.78407 t=2020-05-02T16:04:57+0000 lvl=info msg="Starting Grafana" logger=server version=6.3.5 commit=67bad72 branch=HEAD compiled=2019-09-02T09:34:49+0000
+2020-05-02_16:04:57.78412 t=2020-05-02T16:04:57+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/conf/defaults.ini
+2020-05-02_16:04:57.78414 t=2020-05-02T16:04:57+0000 lvl=info msg="Config loaded from" logger=settings file=/var/opt/gitlab/grafana/grafana.ini
+2020-05-02_16:04:57.78416 t=2020-05-02T16:04:57+0000 lvl=info msg="Path Home" logger=settings path=/var/opt/gitlab/grafana
+2020-05-02_16:04:57.78418 t=2020-05-02T16:04:57+0000 lvl=info msg="Path Data" logger=settings path=/var/opt/gitlab/grafana/data
+2020-05-02_16:04:57.78420 t=2020-05-02T16:04:57+0000 lvl=info msg="Path Logs" logger=settings path=/var/log/gitlab/grafana
+2020-05-02_16:04:57.78422 t=2020-05-02T16:04:57+0000 lvl=info msg="Path Plugins" logger=settings path=/var/opt/gitlab/grafana/data/plugins
+2020-05-02_16:04:57.78424 t=2020-05-02T16:04:57+0000 lvl=info msg="Path Provisioning" logger=settings path=/var/opt/gitlab/grafana/provisioning
+2020-05-02_16:04:57.78426 t=2020-05-02T16:04:57+0000 lvl=info msg="App mode production" logger=settings
+2020-05-02_16:04:57.78471 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing SqlStore" logger=server
+2020-05-02_16:04:57.78477 t=2020-05-02T16:04:57+0000 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+2020-05-02_16:04:57.78515 t=2020-05-02T16:04:57+0000 lvl=info msg="Starting DB migration" logger=migrator
+2020-05-02_16:04:57.80021 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing HTTPServer" logger=server
+2020-05-02_16:04:57.80121 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing InternalMetricsService" logger=server
+2020-05-02_16:04:57.80122 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing RemoteCache" logger=server
+2020-05-02_16:04:57.80123 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing QuotaService" logger=server
+2020-05-02_16:04:57.80123 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing PluginManager" logger=server
+2020-05-02_16:04:57.80127 t=2020-05-02T16:04:57+0000 lvl=info msg="Starting plugin search" logger=plugins
+2020-05-02_16:04:57.83112 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing RenderingService" logger=server
+2020-05-02_16:04:57.83113 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing DatasourceCacheService" logger=server
+2020-05-02_16:04:57.83114 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing HooksService" logger=server
+2020-05-02_16:04:57.83115 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing LoginService" logger=server
+2020-05-02_16:04:57.83116 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing SearchService" logger=server
+2020-05-02_16:04:57.83117 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing ServerLockService" logger=server
+2020-05-02_16:04:57.83117 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing TracingService" logger=server
+2020-05-02_16:04:57.83119 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing UsageStatsService" logger=server
+2020-05-02_16:04:57.83121 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing UserAuthTokenService" logger=server
+2020-05-02_16:04:57.83121 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing CleanUpService" logger=server
+2020-05-02_16:04:57.83122 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing NotificationService" logger=server
+2020-05-02_16:04:57.83424 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing provisioningServiceImpl" logger=server
+2020-05-02_16:04:57.86170 t=2020-05-02T16:04:57+0000 lvl=info msg="Initializing Stream Manager"
+2020-05-02_16:04:57.86176 t=2020-05-02T16:04:57+0000 lvl=info msg="HTTP Server Listen" logger=http.server address=localhost:3000 protocol=http subUrl=/-/grafana socket=
+2020-05-02_17:14:31.45430 t=2020-05-02T17:14:31+0000 lvl=info msg="Shutdown started" logger=server reason="System signal: terminated"
+2020-05-02_17:14:31.45480 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped RenderingService" logger=server reason=nil
+2020-05-02_17:14:31.45480 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped NotificationService" logger=server reason="context canceled"
+2020-05-02_17:14:31.45481 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped UsageStatsService" logger=server reason="context canceled"
+2020-05-02_17:14:31.45481 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped UserAuthTokenService" logger=server reason="context canceled"
+2020-05-02_17:14:31.45481 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped RemoteCache" logger=server reason="context canceled"
+2020-05-02_17:14:31.45481 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped CleanUpService" logger=server reason="context canceled"
+2020-05-02_17:14:31.45482 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped PluginManager" logger=server reason="context canceled"
+2020-05-02_17:14:31.45482 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped InternalMetricsService" logger=server reason="context canceled"
+2020-05-02_17:14:31.45482 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped Stream Manager"
+2020-05-02_17:14:31.45482 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped TracingService" logger=server reason=nil
+2020-05-02_17:14:31.45483 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped provisioningServiceImpl" logger=server reason="context canceled"
+2020-05-02_17:14:31.54884 t=2020-05-02T17:14:31+0000 lvl=info msg="Stopped HTTPServer" logger=server reason=nil
+2020-05-02_17:14:31.54900 t=2020-05-02T17:14:31+0000 lvl=eror msg="Server shutdown" logger=server reason="System signal: terminated"
